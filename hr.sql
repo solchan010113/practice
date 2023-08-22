@@ -1,197 +1,197 @@
--- ¹®Á¦ 1
+-- ë¬¸ì œ 1
 SELECT employee_id, first_name, last_name, hire_date
 FROM employees;
 
--- ¹®Á¦ 2
+-- ë¬¸ì œ 2
 SELECT employee_id, first_name, last_name, hire_date
 FROM employees
 ORDER BY employee_id;
 
--- ¹®Á¦ 3
+-- ë¬¸ì œ 3
 SELECT employee_id, first_name, last_name, hire_date
 FROM employees
 ORDER BY hire_date DESC, employee_id;
 
--- ¹®Á¦ 4
-SELECT first_name ||' '|| last_name "¼º ¸í", phone_number, hire_date, salary, department_id
+-- ë¬¸ì œ 4
+SELECT first_name ||' '|| last_name "ï¿½ï¿½ ï¿½ï¿½", phone_number, hire_date, salary, department_id
 FROM employees;
 
--- ¹®Á¦ 5
-SELECT first_name ||' '|| last_name "¼º ¸í", phone_number, hire_date, salary, department_id
+-- ë¬¸ì œ 5
+SELECT first_name ||' '|| last_name "ï¿½ï¿½ ï¿½ï¿½", phone_number, hire_date, salary, department_id
 FROM employees
 ORDER BY hire_date DESC;
 
--- ¹®Á¦ 6
-SELECT first_name ||' '|| last_name "¼º ¸í", phone_number, hire_date, salary, department_id
+-- ë¬¸ì œ 6
+SELECT first_name ||' '|| last_name "ï¿½ï¿½ ï¿½ï¿½", phone_number, hire_date, salary, department_id
 FROM employees
 ORDER BY department_id;
 
--- ¹®Á¦ 7
-SELECT first_name ||' '|| last_name "¼º ¸í", phone_number, hire_date, salary, department_id
+-- ë¬¸ì œ 7
+SELECT first_name ||' '|| last_name "ï¿½ï¿½ ï¿½ï¿½", phone_number, hire_date, salary, department_id
 FROM employees
 ORDER BY department_id, hire_date;
 
--- ¹®Á¦ 8
-SELECT first_name ||' '|| last_name "¼º ¸í", phone_number, hire_date, salary, nvl(department_id, 0)
+-- ë¬¸ì œ 8
+SELECT first_name ||' '|| last_name "ï¿½ï¿½ ï¿½ï¿½", phone_number, hire_date, salary, nvl(department_id, 0)
 FROM employees
 ORDER BY department_id, hire_date;
 
--- ¹®Á¦ 9
-SELECT first_name||' '||last_name "ÀÌ¸§", salary "¿¬ºÀ", phone_number "ÀüÈ­-¹øÈ£", hire_date "ÀÔ»çÀÏ"
+-- ë¬¸ì œ 9
+SELECT first_name||' '||last_name "ï¿½Ì¸ï¿½", salary "ë¬¸ì œ", phone_number "ï¿½ï¿½È­-ï¿½ï¿½È£", hire_date "ï¿½Ô»ï¿½ï¿½ï¿½"
 FROM employees
 ORDER BY hire_date;
 
--- ¹®Á¦ 10
+-- ë¬¸ì œ 10
 SELECT last_name, salary
 FROM employees
 WHERE salary >= 12000;
 
--- ¹®Á¦ 11
+-- ë¬¸ì œ 11
 SELECT last_name, salary
 FROM employees
 WHERE salary >= 12000
 ORDER BY salary DESC;
 
--- ¹®Á¦ 12
+-- ë¬¸ì œ 12
 SELECT last_name, salary
 FROM employees
 WHERE salary >= 12000
 ORDER BY salary DESC, hire_date;
 
--- ¹®Á¦ 13
+-- ë¬¸ì œ 13
 SELECT UPPER(first_name), UPPER(last_name), TO_CHAR(hire_date, 'DD-MM-YYYY')
 FROM employees
 WHERE hire_date > '2007-01-01';
 
--- ¹®Á¦ 14
+-- ë¬¸ì œ 14
 SELECT employee_id, last_name, department_id
 FROM employees
 WHERE employee_id = 100;
 
--- ¹®Á¦ 15
+-- ë¬¸ì œ 15
 SELECT employee_id, last_name, department_id
 FROM employees
 WHERE employee_id BETWEEN 100 AND 199;
 
--- ¹®Á¦ 16
+-- ë¬¸ì œ 16
 SELECT last_name, salary
 FROM employees
 WHERE salary NOT BETWEEN 5000 AND 12000;
 
--- ¹®Á¦ 17
+-- ë¬¸ì œ 17
 SELECT last_name, TO_CHAR(hire_date,'YYYY-MM-DD')
 FROM employees
 WHERE hire_date between '2007-01-01' AND '2007-12-31'
 ORDER BY hire_date DESC;
 
--- ¹®Á¦ 18
+-- ë¬¸ì œ 18
 SELECT *
 FROM employees
 WHERE salary IN(2500,3500,7000);
 
--- ¹®Á¦ 19
+-- ë¬¸ì œ 19
 SELECT *
 FROM employees
 WHERE salary NOT IN(2500,3500,7000);
 
--- ¹®Á¦ 20
+-- ë¬¸ì œ 20
 SELECT *
 FROM employees
 WHERE salary NOT IN(2500,3500,7000)
 AND job_id = 'SA_REP';
 
--- ¹®Á¦ 21
+-- ë¬¸ì œ 21
 SELECT *
 FROM employees
 WHERE salary NOT IN(2500,3500,7000)
 AND job_id IN('SA_REP','ST_CLERK');
 
--- ¹®Á¦ 22
+-- ë¬¸ì œ 22
 SELECT last_name, department_id
 FROM employees
 WHERE department_id IN(20,50)
 ORDER BY last_name;
 
 
--- ¹®Á¦ 23
+-- ë¬¸ì œ 23
 SELECT last_name, salary
 FROM employees
 WHERE salary BETWEEN 5000 AND 12000;
 
--- ¹®Á¦ 24
+-- ë¬¸ì œ 24
 SELECT first_name, employee_id
 FROM employees
 WHERE first_name LIKE'%a%' OR first_name LIKE'%e%';
 
--- ¹®Á¦ 25
+-- ë¬¸ì œ 25
 SELECT first_name, employee_id
 FROM employees
 WHERE first_name LIKE'J%' AND first_name LIKE'%n';
 
--- ¹®Á¦ 26
+-- ë¬¸ì œ 26
 SELECT first_name, employee_id, phone_number
 FROM employees
 WHERE first_name LIKE'J__n';
 
--- ¹®Á¦ 27
+-- ë¬¸ì œ 27
 SELECT last_name, salary,commission_pct
 FROM employees
 WHERE commission_pct IS NOT NULL
 ORDER BY salary DESC, commission_pct DESC;
 
--- ¹®Á¦ 28
+-- ë¬¸ì œ 28
 SELECT last_name, job_id
 FROM employees
 WHERE manager_id IS NOT NULL;
 
--- ¹®Á¦ 30
-SELECT employee_id "»ç¹ø",first_name "ÀÌ¸§",salary "¿¬ºÀ", salary/12 "¿ù±Þ", salary/12*0.033 "¼¼±Ý", salary-salary/12*0.033 "½Ç¼ö·É¾×"
+-- ë¬¸ì œ 30
+SELECT employee_id "ï¿½ï¿½ï¿½",first_name "ï¿½Ì¸ï¿½",salary "ë¬¸ì œ", salary/12 "ë¬¸ì œ", salary/12*0.033 "ë¬¸ì œ", salary-salary/12*0.033 "ï¿½Ç¼ï¿½ï¿½É¾ï¿½"
 FROM employees;
 
--- ¹®Á¦ 31
+-- ë¬¸ì œ 31
 SELECT job_title, max_salary
 FROM jobs
 ORDER BY max_salary DESC;
 
--- ¹®Á¦ 32
+-- ë¬¸ì œ 32
 SELECT first_name, manager_id, commission_pct, salary
 FROM employees
 WHERE manager_id IS NOT NULL 
 AND commission_pct IS NULL;
 
--- ¹®Á¦ 33
+-- ë¬¸ì œ 33
 SELECT job_title, max_salary
 FROM jobs
 WHERE max_salary >= 10000
 ORDER BY max_salary DESC;
 
--- ¹®Á¦ 34
+-- ë¬¸ì œ 34
 SELECT first_name, salary, commission_pct
 FROM employees
 WHERE salary BETWEEN 10000 AND 13999;
 
--- ¹®Á¦ 35
-SELECT first_name, salary, TO_CHAR(hire_date,'YYYY-MM-DD HH:MI:SS')||' (³â-¿ù)', department_id
+-- ë¬¸ì œ 35
+SELECT first_name, salary, TO_CHAR(hire_date,'YYYY-MM-DD HH:MI:SS')||' (ï¿½ï¿½-ï¿½ï¿½)', department_id
 FROM employees
 WHERE first_name LIKE'J__n';
 
--- ¹®Á¦ 36
+-- ë¬¸ì œ 36
 SELECT first_name, salary
 FROM employees
 WHERE UPPER(first_name) LIKE '%S%';
 
--- ¹®Á¦ 37
+-- ë¬¸ì œ 37
 SELECT *
 FROM departments
 ORDER BY LENGTH(department_name) DESC;
 
--- ¹®Á¦ 38
+-- ë¬¸ì œ 38
 SELECT UPPER(country_name)
 FROM countries
 WHERE region_id IS NOT NULL
 ORDER BY country_name;
 
--- ¹®Á¦ 39
+-- ë¬¸ì œ 39
 SELECT first_name, salary, REPLACE(phone_number,'.','-'), hire_date
 FROM employees
 WHERE hire_date < '2003/12/03';
